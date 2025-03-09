@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- saved from url=(0045)http://localhost:81/diagnosa_burung/index.php -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BirdCare - Diagnosis Burung Kicau</title>
+    <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./index_files/css2" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f9f9f9;
+        }
+        .navbar {
+            background-color: #00796b; /* Dark teal for navbar */
+            padding: 15px 30px;
+        }
+        .navbar-brand {
+            font-family: 'Pacifico', cursive;
+            font-size: 2.5rem;
+            color: #ffffff !important;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+        }
+        .nav-link {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ffffff !important;
+            transition: color 0.3s ease-in-out;
+        }
+        .nav-link:hover {
+            color: #ffdd57 !important; /* Golden yellow */
+        }
+        .hero {
+            height: 70vh;
+            background: url('images/burung-kicau3.gif') no-repeat center center fixed;
+            background-size: cover;
+            position: relative;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: brightness(50%);
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 4.5rem;
+            font-family: 'Pacifico', cursive;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+        .hero p {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+        .arrow {
+            position: absolute;
+            bottom: 30px;
+            font-size: 3rem;
+            color: #ffffff;
+            cursor: pointer;
+            animation: bounce 1.5s infinite;
+        }
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+        .start-btn {
+            margin-top: 20px;
+            padding: 15px 30px;
+            font-size: 1.5rem;
+            background-color: #ffdd57;
+            border: none;
+            color: #ff0000;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        .start-btn:hover {
+            background-color: #00796b;
+            color: #ffffff;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            border: none;
+            margin-top: 30px;
+        }
+        .form-check-label {
+            font-size: 1.1rem;
+        }
+        footer {
+            background-color: #00796b;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer p {
+            font-size: 1.2rem;
+        }
+        .btn-primary {
+            background-color: #00796b;
+            border-color: #00796b;
+        }
+        .btn-primary:hover {
+            background-color: #003d48;
+            border-color: #003d48;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigasi -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="http://localhost:81/diagnosa_burung/index.php#">BirdCare</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="http://localhost:81/diagnosa_burung/index.php">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:81/diagnosa_burung/jenis_burung.php">Jenis Burung</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:81/diagnosa_burung/jenis_penyakit.php">Jenis Penyakit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:81/diagnosa_burung/about.php">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost:81/diagnosa_burung/contact.php">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content">
+            <h1>BirdCare</h1>
+            <p>Solusi Cerdas untuk Kesehatan Burung Kicau Anda</p>
+        </div>
+        <a href="http://localhost:81/diagnosa_burung/index.php#diagnosis-section" class="arrow">
+            <i class="bi bi-arrow-down-circle-fill"></i>
+        </a>
+    </div>
+
+    <!-- Mulai Diagnosa Button -->
+    <div class="container text-center">
+        <a href="http://localhost:81/diagnosa_burung/index.php#diagnosis-section">
+            <button class="start-btn">Mulai Diagnosa</button>
+        </a>
+    </div>
+
+    <!-- Form Diagnosis -->
+    <div class="container my-5" id="diagnosis-section">
+        <div class="card p-4">
+            <form action="http://localhost:81/diagnosa_burung/diagnosis.php" method="post">
+                <h3 class="mb-4 text-center">Pilih Gejala yang Dialami:</h3>
+                <div class="row">
+                    <div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="1" id="gejala1"><label class="form-check-label" for="gejala1">Burung tidak mau makan</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="2" id="gejala2"><label class="form-check-label" for="gejala2">Bulu kusam dan rontok</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="3" id="gejala3"><label class="form-check-label" for="gejala3">Nafas tersengal-sengal</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="4" id="gejala4"><label class="form-check-label" for="gejala4">Kotoran burung encer</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="5" id="gejala5"><label class="form-check-label" for="gejala5">Burung terlihat lesu</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="6" id="gejala6"><label class="form-check-label" for="gejala6">Burung sering mengeluarkan suara serak</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="7" id="gejala7"><label class="form-check-label" for="gejala7">Burung gemetar tanpa sebab</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="8" id="gejala8"><label class="form-check-label" for="gejala8">Sayap burung terkulai</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="9" id="gejala9"><label class="form-check-label" for="gejala9">Mata burung berair</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="10" id="gejala10"><label class="form-check-label" for="gejala10">Burung tidak berkicau seperti biasanya</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="11" id="gejala11"><label class="form-check-label" for="gejala11">Suara burung serak atau hilang</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="12" id="gejala12"><label class="form-check-label" for="gejala12">Burung terlihat malas bergerak</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="13" id="gejala13"><label class="form-check-label" for="gejala13">Bulu Kusam</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="14" id="gejala14"><label class="form-check-label" for="gejala14">Penurunan Nafsu Makan</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="15" id="gejala15"><label class="form-check-label" for="gejala15">Diare</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="16" id="gejala16"><label class="form-check-label" for="gejala16">Demam</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="17" id="gejala17"><label class="form-check-label" for="gejala17">Kelelahan</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="18" id="gejala18"><label class="form-check-label" for="gejala18">Pendarahan Internal</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="19" id="gejala19"><label class="form-check-label" for="gejala19">Gatal pada Kulit</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="20" id="gejala20"><label class="form-check-label" for="gejala20">Bulu Rontok</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="21" id="gejala21"><label class="form-check-label" for="gejala21">Pelemahan Umum</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="22" id="gejala22"><label class="form-check-label" for="gejala22">Gangguan Pernapasan</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="23" id="gejala23"><label class="form-check-label" for="gejala23">Diare Berdarah</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="24" id="gejala24"><label class="form-check-label" for="gejala24">Penurunan Berat Badan Cepat</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="25" id="gejala25"><label class="form-check-label" for="gejala25">Pembengkakan Tubuh</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="26" id="gejala26"><label class="form-check-label" for="gejala26">Kelelahan Ekstrem</label></div></div><div class="col-md-4 mb-3"><div class="form-check"><input class="form-check-input" type="checkbox" name="gejala[]" value="27" id="gejala27"><label class="form-check-label" for="gejala27">Penurunan Nafsu Makan dan Berat Badan</label></div></div>                </div>
+                <button type="submit" class="btn btn-primary mt-3 w-100">Diagnosa</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 BirdCare - Sistem Pakar Diagnosis Burung Kicau. All rights reserved.</p>
+    </footer>
+
+    <script src="./index_files/bootstrap.bundle.min.js.download"></script>
+
+
+</body></html>
